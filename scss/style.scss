@@ -1,0 +1,97 @@
+@import "global.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+// variablse
+
+$intro_emailSignUpBG: hsl(217, 28%, 15%);
+$mainBG: hsl(218, 28%, 13%);
+$footerBG:hsl(216, 53%, 9%);
+$testimonialsBG:hsl(219, 30%, 18%);
+$cyan:hsl(176, 68%, 64%);
+$blue:hsl(198, 60%, 50%);
+$red:hsl(0, 100%, 63%);
+$white: hsl(0, 0%, 100%);
+
+// font family for ### Headings, Call-to-actions, Header Navigation
+%fontfamily {
+    font-family: 'Raleway', sans-serif;
+    // @extend %fontfamily
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+// main container
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 72px 77px 50px;
+    background: $mainBG;
+    color: $white;
+}
+
+// header
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.logo {
+
+    img {
+        width: 100%;
+        max-width: 180px;
+        min-width: 74px;
+    }
+}
+
+.headerlinks {
+    display: flex;
+    flex-direction: row;
+
+
+    >li {
+        margin: 0 55px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &:hover {
+            text-decoration: underline;
+            font-weight: 700;
+            transition: ease-in 0.2s;
+            cursor: pointer;
+
+        }
+    }
+}
+
+
+// mobile version
+
+@media (max-width: 768px) {
+    .container {
+        padding: 21px 18px 38px;
+
+    }
+    .logo {
+
+        img {
+            width: 74px;
+        }
+    }
+
+    .headerlinks {
+        font-size: 12px;
+
+        >li {
+            margin: 0 21px 0 0;
+        }
+    }
+}
