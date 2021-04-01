@@ -88,6 +88,10 @@ h6 {
 }
 
 /* ---------------------  */
+.maincontent__header {
+  font-family: 'Raleway', sans-serif;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -95,12 +99,12 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 72px 77px 50px;
   background: #181f2a;
   color: white;
 }
 
 header {
+  padding: 72px 77px 0 77px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,8 +152,54 @@ header {
   cursor: pointer;
 }
 
+.maincontent {
+  margin: 73px auto;
+  max-width: 732px;
+  text-align: center;
+  padding-bottom: 166px;
+}
+
+.maincontent__img {
+  margin: 0 0 46px 0;
+}
+
+.maincontent__img > img {
+  width: 100%;
+}
+
+.maincontent__header {
+  font-size: 41px;
+  line-height: 48px;
+  font-weight: 700;
+  margin: 0 0 42px 0;
+}
+
+.maincontetn__paragraph {
+  margin: 0 auto 33px auto;
+  max-width: 80%;
+  font-size: 19px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+}
+
+.link_button {
+  margin: 0 auto;
+  display: block;
+  width: 282px;
+  border-radius: 28px;
+  line-height: 56px;
+  height: 56px;
+  color: white;
+  background: #339ecc;
+}
+
+.link_button:hover {
+  background: #65e2d9;
+}
+
+/*  max width 768px*/
 @media (max-width: 768px) {
-  .container {
+  header {
     padding: 21px 18px 38px;
   }
   .logo img {
