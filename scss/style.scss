@@ -25,7 +25,7 @@ body {
 .container {
     max-width: 1440px;
     margin: 0 auto;
-    background: $mainBG;
+    background: $intro_emailSignUpBG;
     color: $white;
 }
 
@@ -37,8 +37,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-
 }
 
 .logo {
@@ -119,6 +117,75 @@ header {
     }
 }
 
+// main functions 
+
+
+
+.mainfunctionsbg {
+    // height: 100vh;
+    background: $mainBG;
+    
+}
+
+.mainfunctions {
+    margin: 0 277px;
+    max-width: 887px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.mainfunctions_card {
+    margin: 0 auto;
+    max-width: 390px;
+    min-width: 288px;
+    margin: 0 0 100px 0;
+}
+
+.mainfunctions_card__img {
+    height: 93px;
+}
+
+.mainfunction_car__header {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 50px;
+    
+}
+
+.mainfunctions_card__paragraph {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+// productive section
+
+.productovesection {
+    display: flex;
+    flex-direction: row;
+}
+
+.productovesection_image {
+    >img{
+        width: 100%;
+        max-width: 560px;
+        min-width: 288px
+        
+    }
+}
+
+.productovesection_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.productovesection_text__header {}
+
+.productovesection_text__paragraph {}
+
+.productovesection_text_link {}
 
 // mobile version
 
@@ -143,4 +210,10 @@ header {
             margin: 0 21px 0 0;
         }
     }
+
+    .productovesection {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
