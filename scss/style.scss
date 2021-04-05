@@ -21,17 +21,19 @@ $white: hsl(0, 0%, 100%);
 
 body {
     font-family: 'Open Sans', sans-serif;
-    // background: $intro_emailSignUpBG;
-
+    background-color: $intro_emailSignUpBG;
+    
 }
 
 // main container
 .container {
-    max-width: 1440px;
+    // max-width: 1440px;
     margin: 0 auto;
-    background: $intro_emailSignUpBG;
+    background: url(../img/bg-curvy-desktop-long.svg) 50% 800px no-repeat;
     color: $white;
-}
+    @media (max-width: 375px) {background: url(../img/bg-curvy-mobile-long.svg) 50% 800px no-repeat ;}}
+
+
 
 // header
 
@@ -131,7 +133,7 @@ header {
 .mainfunctionsbg {
     // height: 100vh;
     // background: url('../img/bg-curvy-desktop.svg')   no-repeat;
-    background: $mainBG;
+    // background: $mainBG;
 
 }
 

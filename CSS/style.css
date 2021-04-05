@@ -98,13 +98,19 @@ svg {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #1c2431;
 }
 
 .container {
-  max-width: 1440px;
   margin: 0 auto;
-  background: #1c2431;
+  background: url(../img/bg-curvy-desktop-long.svg) 50% 800px no-repeat;
   color: white;
+}
+
+@media (max-width: 375px) {
+  .container {
+    background: url(../img/bg-curvy-mobile-long.svg) 50% 800px no-repeat;
+  }
 }
 
 header {
@@ -199,10 +205,6 @@ header {
 
 .link_button:hover {
   background: #65e2d9;
-}
-
-.mainfunctionsbg {
-  background: #181f2a;
 }
 
 .mainfunctions {
