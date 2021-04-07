@@ -6,8 +6,8 @@
 
 $intro_emailSignUpBG: hsl(217, 28%, 15%);
 $mainBG: hsl(218, 28%, 13%);
-$footerBG:hsl(216, 53%, 9%);
 $testimonialsBG:hsl(219, 30%, 18%);
+$footerBG:hsl(216, 53%, 9%);
 $cyan:hsl(176, 68%, 64%);
 $blue:hsl(198, 60%, 50%);
 $red:hsl(0, 100%, 63%);
@@ -24,34 +24,6 @@ $white: hsl(0, 0%, 100%);
     //@extend %font-heading-links
 }
 
-// TODO
-// delet befor and min height at end
-// body {
-//     position: relative;
-//     min-height: 3619px;
-//     font-family: 'Open Sans', sans-serif;
-
-
-
-
-//     &::before {
-//         content: '';
-//         display: block;
-//         position: absolute;
-//         left: 0;
-//         top: 0;
-//         width: 100%;
-//         height: 100%;
-//         opacity: 0.6;
-//         background: url(../design/desktop-design.jpg) 50% 0 no-repeat;
-//         @media (max-width:750px) {
-//             background: url(../design/mobile-design.jpg) 50% 0 no-repeat;}}
-// }
-
-// .design {
-//     position: relative;
-// }
-
 // starting styling
 body{
     color: $white;
@@ -61,11 +33,14 @@ body{
 
 .main-container {
     margin: 0 auto;
-    
-
+    background: url(../img/bg-curvy-desktop-long.svg) 50% 750px no-repeat;
     @media (max-width:750px) {
         max-width: 750px;
-
+        
+    }
+    @media (max-width:375px) {
+        
+        background: url(../img/bg-curvy-mobile-long.svg) 50% 250px no-repeat;
     }
 }
 
@@ -469,15 +444,13 @@ header {
 
 // ----- early access
 .early-access {
-    // margin: 280px 0 0 0;
-
     @media (max-width:750px) {
         margin: 400px 0 0 0;
     }
 }
 
 .early-access__containet {
-    background-color: $mainBG;
+    background-color: $intro_emailSignUpBG;
     max-width: 865px;
     margin: 0 auto;
     text-align: center;

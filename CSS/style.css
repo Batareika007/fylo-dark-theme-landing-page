@@ -103,11 +103,18 @@ body {
 
 .main-container {
   margin: 0 auto;
+  background: url(../img/bg-curvy-desktop-long.svg) 50% 750px no-repeat;
 }
 
 @media (max-width: 750px) {
   .main-container {
     max-width: 750px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main-container {
+    background: url(../img/bg-curvy-mobile-long.svg) 50% 250px no-repeat;
   }
 }
 
@@ -615,7 +622,7 @@ header {
 }
 
 .early-access__containet {
-  background-color: #181f2a;
+  background-color: #1c2431;
   max-width: 865px;
   margin: 0 auto;
   text-align: center;
