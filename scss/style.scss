@@ -19,13 +19,13 @@ $white: hsl(0, 0%, 100%);
     // @extend %fontfamily
 }
 
-%font-heading-links{
-    font-family:'Open Sans', sans-serif;
+%font-heading-links {
+    font-family: 'Open Sans', sans-serif;
     //@extend %font-heading-links
 }
 
 // starting styling
-body{
+body {
     color: $white;
     background-color: $intro_emailSignUpBG;
     @extend %fontfamily;
@@ -34,12 +34,14 @@ body{
 .main-container {
     margin: 0 auto;
     background: url(../img/bg-curvy-desktop-long.svg) 50% 750px no-repeat;
+
     @media (max-width:750px) {
         max-width: 750px;
-        
+
     }
+
     @media (max-width:375px) {
-        
+
         background: url(../img/bg-curvy-mobile-long.svg) 50% 250px no-repeat;
     }
 }
@@ -47,14 +49,15 @@ body{
 .container {
     max-width: 1440px;
     margin: 75px auto 0;
-    padding: 0 80px ;
+    padding: 0 80px;
+
     @media (max-width:750px) {
         padding: 42px 46px 0 38px;
     }
 }
 
 header {
-    
+
     display: flex;
     justify-content: space-between;
 }
@@ -71,14 +74,24 @@ header {
     >ul {
         display: flex;
         flex-direction: row;
+
         >li {
             padding: 0 0 0 58px;
+
             @media (max-width:750px) {
                 padding: 0 0 0 50px;
             }
+
             >a {
                 color: $white;
                 font-size: 16px;
+
+                &:hover {
+                    -webkit-text-stroke: 1px;
+                    padding-bottom: 3px;
+                    border-bottom: 2px solid $white;
+                }
+
                 @media (max-width:750px) {
                     font-size: 24px;
                 }
@@ -99,9 +112,7 @@ header {
         }
 
         >img {
-            @media (max-width:750px) {
-                max-width: 100%;
-            }
+            max-width: 100%;
         }
     }
 
@@ -118,16 +129,19 @@ header {
             font-size: 40px;
             font-weight: 700;
             line-height: 1.5;
+
             @media (max-width:750px) {
                 font-size: 49px;
             }
         }
     }
+
     >.paragraph {
         margin: 35px auto 34px;
         max-width: 630px;
         font-size: 20px;
         line-height: 1.4;
+
         @media (max-width:750px) {
             margin-top: 31px;
             max-width: 600px;
@@ -135,6 +149,7 @@ header {
             line-height: 1.5;
         }
     }
+
     >.button {
         @media (max-width:750px) {
             margin: 65px 90px;
@@ -150,6 +165,12 @@ header {
             font-weight: 400;
             color: $white;
             background-color: $blue;
+
+            &:hover {
+                background-color: $cyan;
+                font-weight: 700;
+
+            }
 
             @media (max-width:750px) {
                 width: 100%;
@@ -220,7 +241,7 @@ header {
     }
 
     @media (max-width:750px) {
-        border: black 1px solid;
+
         height: auto;
     }
 }
@@ -325,6 +346,12 @@ header {
             padding: 0 0 3px 0;
             border-bottom: 2px solid $cyan;
             color: $cyan;
+
+            &:hover {
+                color: $white;
+                border-bottom: 2px solid $white;
+            }
+
             @media (max-width:750px) {
                 font-size: 25px;
                 padding: 0 0 10px 0;
@@ -357,12 +384,15 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     z-index: 10;
+
     @media (max-width:750px) {
         flex-direction: column;
     }
+
     &:first-child {
         position: relative;
     }
+
     &:first-child::before {
         content: url('../icons/bg-quotes.png');
         width: 100%;
@@ -371,6 +401,7 @@ header {
         left: 25px;
         bottom: 35px;
         z-index: -10;
+
         @media (max-width:750px) {
             left: 5px;
         }
@@ -388,7 +419,7 @@ header {
         padding: 52px 65px 0 39px;
     }
 
-    
+
 }
 
 .card__text {
@@ -402,7 +433,7 @@ header {
 }
 
 .card__autor {
-    
+
     display: flex;
     flex-direction: row;
 }
@@ -498,18 +529,19 @@ header {
     width: 480px;
     border-radius: 25px;
     padding: 0 25px;
-    &::placeholder{
+
+    &::placeholder {
         opacity: 0.9;
     }
-    &:focus::placeholder{
+
+    &:focus::placeholder {
         opacity: 0;
     }
 
     @media (max-width:750px) {
-        border: 1px solid black;
         width: 100%;
         padding: 31.5px 25px;
-        
+
         border-radius: 90px;
         font-size: 29px;
         margin: 0 0 44px 0;
@@ -521,6 +553,12 @@ header {
     border-radius: 25px;
     color: $white;
     background-color: $blue;
+
+    &:hover {
+        background-color: $cyan;
+        font-weight: 700;
+    }
+
     @media (max-width:750px) {
         width: 100%;
         line-height: 90px;
@@ -534,6 +572,7 @@ header {
 .footer {
     background-color: $footerBG;
     @extend %font-heading-links;
+
     @media (max-width:750px) {}
 }
 
@@ -544,7 +583,6 @@ header {
 
     @media (max-width:750px) {
         margin: 100px auto 0;
-        border: 1px solid red;
         padding: 0 60px;
         font-size: 31px;
     }
@@ -568,7 +606,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
 
     @media (max-width:750px) {
         flex-direction: column;
@@ -579,18 +617,24 @@ header {
     flex: 0 1 366px;
     line-height: 20px;
     position: relative;
-    >a{
+
+    >a {
         color: $white;
-        &::before{
-            content:url('../icons/icon-location.svg');
+
+        &:hover {
+            font-weight: 700;
+        }
+
+        &::before {
+            content: url('../icons/icon-location.svg');
             position: absolute;
-            left:-27px;
+            left: -27px;
             top: 4px;
         }
     }
 
-    
-    
+
+
 
     @media (max-width:750px) {
         padding: 0 0 0 75px;
@@ -602,11 +646,17 @@ header {
 
 .footer-container__links_contacts {
     flex: 0 1 170px;
-    >a{      
+
+    >a {
         color: $white;
-         padding: 0 0 30px 0;
-         line-height: 1.6;
+        padding: 0 0 30px 0;
+        line-height: 1.6;
+
+        &:hover {
+            font-weight: 700;
+        }
     }
+
     @media (max-width:750px) {
         padding: 0 0 0 70px;
         flex: 0 1 auto;
@@ -614,9 +664,10 @@ header {
         flex-direction: column;
         line-height: 1.6;
         margin: 0 0 126px 0;
+
         >a {
             margin: 0 0 30px 0;
-            
+
         }
     }
 }
@@ -624,6 +675,7 @@ header {
 .telefon {
     display: inline-block;
     position: relative;
+
     &::before {
         content: url('../icons/icon-phone.svg');
         position: absolute;
@@ -631,9 +683,11 @@ header {
         top: 4px;
     }
 }
+
 .mail {
     display: inline-block;
     position: relative;
+
     &::before {
         content: url('../icons/icon-email.svg');
         position: absolute;
@@ -646,19 +700,24 @@ header {
     flex: 0 1 90px;
     display: flex;
     flex-direction: column;
-    >a{
+
+    >a {
         color: $white;
         padding: 0 0 30px 0;
         line-height: 1.6;
+
+        &:hover {
+            font-weight: 700;
+        }
     }
 
     @media (max-width:750px) {
         flex: 0 1 auto;
         line-height: 1.6;
         margin: 0 0 30px 0;
-        
+
     }
-    
+
 }
 
 .footer-container__links_social {
@@ -679,15 +738,16 @@ header {
 }
 
 .round-icon {
-    // margin: 0 0 0 5px;
     display: inline-block;
-    // width: 35px;
-    // height: 35px;
     fill: white;
-    >svg{
-        width: 31px;
-        height: 31px;
-        
+
+    &:hover {
+        fill: $cyan;
+    }
+
+    >svg {
+        width: 35px;
+        height: 35px;
     }
 
     @media (max-width:750px) {
@@ -697,4 +757,3 @@ header {
         height: 55px;
     }
 }
-
