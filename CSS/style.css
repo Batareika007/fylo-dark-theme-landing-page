@@ -505,6 +505,7 @@ header {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  z-index: 10;
 }
 
 @media (max-width: 750px) {
@@ -521,14 +522,13 @@ header {
 }
 
 .cards:first-child::before {
-  content: '';
+  content: url("../icons/bg-quotes.png");
   width: 100%;
   height: 100%;
   position: absolute;
   left: 25px;
   bottom: 35px;
-  background: url("../icons/bg-quotes.png") no-repeat;
-  z-index: -1;
+  z-index: -10;
 }
 
 @media (max-width: 750px) {
