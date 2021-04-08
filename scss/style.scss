@@ -26,6 +26,12 @@ $white: hsl(0, 0%, 100%);
 
 a {
     color: $white;
+    text-shadow: -.25px -.25px 0 transparent,
+    .25px .25px transparent;
+    &:hover{
+        text-shadow: -.25px -.25px 0 $white,
+        .25px .25px $white;
+    }
 }
 
 // starting styling
@@ -116,6 +122,7 @@ header {
         justify-content: space-between;
 
         >li {
+            position: relative;
             >a {
                 font-size: 16px;
 
@@ -128,7 +135,6 @@ header {
                 }
 
                 &:hover {
-                    -webkit-text-stroke: 1px;
                     padding-bottom: 3px;
                     border-bottom: 2px solid $white;
                 }
@@ -241,7 +247,7 @@ header {
             }
             &:hover {
                 background-color: $cyan;
-                font-weight: 700;
+                
 
             }
         }
@@ -511,7 +517,7 @@ header {
     @media (max-width:1025px) {}
     @media (max-width:769px) {
         flex-direction: column;
-
+        width: 100%;
     }
     @media (max-width:480px) {}
     @media (max-width:375px) {
@@ -523,10 +529,12 @@ header {
     border-radius: 25px;
     padding: 0 25px;
     @media (max-width:1025px) {}
-    @media (max-width:769px) {}
+    @media (max-width:769px) {
+        width: 100%;
+    }
     @media (max-width:480px) {}
     @media (max-width:375px) {
-        width: 100%;
+       
     }
 
     &::placeholder {
@@ -573,8 +581,6 @@ header {
     >img {
         height: 100%;
     }
-
-
 }
 
 .footer-container__links {
@@ -590,7 +596,7 @@ header {
 }
 
 .footer-container__links_map {
-    flex: 0 1 366px;
+    flex: 0 1 25%;
     line-height: 20px;
     position: relative;
     @media (max-width:1025px) {}
@@ -599,26 +605,27 @@ header {
     @media (max-width:375px) {}
 
     >a {
-
+        display: flex;
+        align-content: flex-start;
         &::before {
             content: url('../icons/icon-location.svg');
-            position: absolute;
-            left: -27px;
-            top: 4px;
+            display: inline-block;
+            padding: 0 10px 0 0;
         }
     }
 
 }
 
 .footer-container__links_contacts {
-    flex: 0 1 170px;
+    flex: 0 1 auto;
 
     >a {
+        display: block;
         padding: 0 0 30px 0;
         line-height: 1.6;
 
         &:hover {
-            font-weight: 700;
+            text-decoration: dotted;
         }
     }
 
@@ -628,47 +635,39 @@ header {
 .telefon {
     display: inline-block;
     position: relative;
-
+    display: flex;
     &::before {
         content: url('../icons/icon-phone.svg');
-        position: absolute;
-        left: -37px;
-        top: 4px;
+        
     }
 }
 
 .mail {
     display: inline-block;
     position: relative;
-
+    display: flex;
     &::before {
         content: url('../icons/icon-email.svg');
-        position: absolute;
-        left: -37px;
-        top: 4px;
+        
     }
 }
 
 .footer-container__links_info {
-    flex: 0 1 90px;
+    flex: 0 1 auto;
     display: flex;
     flex-direction: column;
 
     >a {
         padding: 0 0 30px 0;
         line-height: 1.6;
-
-        &:hover {
-            font-weight: 700;
-        }
     }
 
 }
 
 .footer-container__links_social {
-    flex: 0 0 130px;
+    flex: 0 0 20%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .round-icon {
