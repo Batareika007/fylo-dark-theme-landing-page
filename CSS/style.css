@@ -540,6 +540,10 @@ header {
   content: url("../icons/icon-arrow-white.svg");
 }
 
+.founder-cards {
+  background-color: #181F2B;
+}
+
 .cards {
   z-index: 10;
   display: -webkit-box;
