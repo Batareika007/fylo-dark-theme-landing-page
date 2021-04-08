@@ -44,7 +44,18 @@ body {
 .main-container {
     margin: 0 auto;
     background: url(../img/bg-curvy-desktop-long.svg) 50% 750px no-repeat;
+    @media (max-width:1025px) {
 
+        background: url(../img/bg-curvy-desktop-long.svg) 50% 750px no-repeat;
+    }
+    @media (max-width:769px) {
+        background: url(../img/bg-curvy-desktop-long.svg) 50% 700px  no-repeat;
+        
+    }
+    @media (max-width:480px) {
+        
+        background: url(../img/bg-curvy-mobile-long.svg) 50% 450px  no-repeat;
+    }
     @media (max-width:375px) {
         background: url(../img/bg-curvy-mobile-long.svg) 50% 250px no-repeat;
     }
@@ -68,6 +79,8 @@ body {
 // -------- header
 
 header {
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -75,9 +88,6 @@ header {
 .main-container__logo {
     a {
         display: inline-block;
-
-        @media (max-width:1025px) {}
-
         @media (max-width:769px) {
             width: 70%;
         }
@@ -148,10 +158,9 @@ header {
 
 .introduction {
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 150px 0;
 
     >.img {
-
         >img {
             max-width: 100%;
         }
@@ -256,44 +265,47 @@ header {
 
 // ------------------------------   functions
 
-// .functions {}
+.functions {
+    margin: 0 auto 50px auto;
+}
 
 .main-function {
     text-align: center;
+    @media (max-width:1025px) {}
+    @media (max-width:769px) {
+        // margin-bottom: 30px;
+    }
+    
 }
 
 .main-function__section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    @media (max-width:1025px) {}
-    @media (max-width:769px) {}
-    @media (max-width:480px) {}
-    @media (max-width:375px) {
+    margin-top: 50px;
+    @media (max-width:769px) {
         flex-direction: column;
     }
+    
 }
 
 .main-function__block {
     padding: 10px;
     flex: 0 1 380px;
-    @media (max-width:1025px) {}
-    @media (max-width:769px) {}
-    @media (max-width:480px) {}
-    @media (max-width:375px) {
+    @media (max-width:769px) {
         flex: 0 1 auto;
+        margin-bottom: 30px;
     }
+    
 }
 
 .main-function__block_img {
     height: 105px;
-    @media (max-width:1025px) {}
-    @media (max-width:769px) {}
-    @media (max-width:480px) {}
-    @media (max-width:375px) {
+    @media (max-width:769px) {
         height: 80px;
         margin: 0 0 30px 0;
     }
+   
 }
 
 .main-function__block_header {
@@ -313,6 +325,7 @@ header {
 // ----------------------------------- stay productive section
 
 .stay-productive {
+    margin: 0 auto 150px auto;
     padding-bottom:30px;
     @media (max-width:1025px) {}
     @media (max-width:769px) {}
@@ -323,6 +336,7 @@ header {
 }
 
 .stay-productive__container {
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -345,6 +359,13 @@ header {
     flex: 0 1 557px;
     display: flex;
     flex-direction: column;
+    @media (max-width:1025px) {
+        margin-bottom: 30px;
+        flex: 0 1 auto;
+    }
+    @media (max-width:769px) {}
+    @media (max-width:480px) {}
+    @media (max-width:375px) {}
 
     >h2 {
         padding: 0 44px 0 0;
@@ -402,6 +423,7 @@ header {
 // .founder-cards {}
 
 .cards {
+    z-index: 10;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -413,36 +435,31 @@ header {
     }
     @media (max-width:480px) {}
     @media (max-width:375px) {}
+    &:first-child{
+        position: relative;
+    }
+    &:first-child::before{
+        z-index: -10;
+        content: url('../icons/bg-quotes.png');
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 20px;
+        bottom: 35px;
+    }
+
 }
 
 .card {
     background-color: $testimonialsBG;
     padding: 42px 30px 23px 24px;
     flex: 0 1 30%;
-    @media (max-width:1025px) {}
-    @media (max-width:769px) {}
-    @media (max-width:480px) {}
-    @media (max-width:375px) {
+    @media (max-width:769px) {
         margin-bottom: 20px;
     }
-}
-
-
-.quote {
-    position: relative;
-
-    &::before {
-        padding: 0;
-        margin: 0;
-        content: url('../icons/bg-quotes.png');
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: -10px;
-        bottom: 30px;
-        overflow: hidden;
-
-    }
+  
 }
 
 .card__text {
@@ -480,7 +497,9 @@ header {
 // ----------------------------- early access
 
 
-// .early-access {}
+.early-access {
+    background-color: #181F2B;
+}
 
 .early-access__containet {
     background-color: $intro_emailSignUpBG;
@@ -490,15 +509,17 @@ header {
     padding: 45px 75px 40px;
     position: relative;
     bottom: -114px;
+    @media (max-width:1025px) {
+        padding: 30px;
+    }
+    
 }
 
 .early-access__containet_header {
     font-size: 33px;
     font-weight: 700;
     margin: 0 0 24px 0;
-    @media (max-width:1025px) {}
-    @media (max-width:769px) {}
-    @media (max-width:480px) {}
+    
     @media (max-width:375px) {
         font-size: 26px;
     }
@@ -514,29 +535,25 @@ header {
     display: flex;
     justify-content: space-between;
     height: 50px;
-    @media (max-width:1025px) {}
-    @media (max-width:769px) {
+    @media (max-width:1025px) {
         flex-direction: column;
-        width: 100%;
-    }
-    @media (max-width:480px) {}
-    @media (max-width:375px) {
+        margin: 0 auto;
+        height: 100%;
+       
     }
 }
 
 .input-email {
     width: 480px;
+    min-width: 200px;
     border-radius: 25px;
     padding: 0 25px;
-    @media (max-width:1025px) {}
-    @media (max-width:769px) {
+    @media (max-width:1025px) {
         width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        align-self: center;
     }
-    @media (max-width:480px) {}
-    @media (max-width:375px) {
-       
-    }
-
     &::placeholder {
         opacity: 0.9;
     }
@@ -553,6 +570,11 @@ header {
     border-radius: 25px;
     color: $white;
     background-color: $blue;
+    @media (max-width:1025px) {
+        padding: 15px;
+        align-self: center;
+    }
+    
 
     &:hover {
         background-color: $cyan;
@@ -577,7 +599,6 @@ header {
 
 .footer-container__logo {
     margin: 0 0 40px 0;
-
     >img {
         height: 100%;
     }
@@ -587,20 +608,20 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    @media (max-width:1025px) {}
     @media (max-width:769px) {
         flex-direction: column;
     }
-    @media (max-width:480px) {}
-    @media (max-width:375px) {}
+  
 }
 
 .footer-container__links_map {
     flex: 0 1 25%;
     line-height: 20px;
-    position: relative;
+    
     @media (max-width:1025px) {}
-    @media (max-width:769px) {}
+    @media (max-width:769px) {
+        margin-bottom: 20px;
+    }
     @media (max-width:480px) {}
     @media (max-width:375px) {}
 
@@ -610,7 +631,7 @@ header {
         &::before {
             content: url('../icons/icon-location.svg');
             display: inline-block;
-            padding: 0 10px 0 0;
+            padding: 0 20px 0 0;
         }
     }
 
@@ -623,32 +644,28 @@ header {
         display: block;
         padding: 0 0 30px 0;
         line-height: 1.6;
-
-        &:hover {
-            text-decoration: dotted;
-        }
     }
 
 
 }
 
 .telefon {
-    display: inline-block;
-    position: relative;
     display: flex;
+    align-content: flex-start;
     &::before {
         content: url('../icons/icon-phone.svg');
-        
+        display: inline-block;
+        padding: 0 20px 0 0;
     }
 }
 
 .mail {
-    display: inline-block;
-    position: relative;
     display: flex;
+    align-content: flex-start;
     &::before {
         content: url('../icons/icon-email.svg');
-        
+        display: inline-block;
+        padding: 0 20px 0 0;
     }
 }
 
